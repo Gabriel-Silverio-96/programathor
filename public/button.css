@@ -1,0 +1,47 @@
+.btn {
+    padding: 11px 22px;
+    border-radius: 10px;
+}
+
+/******* BTN OUTLINE *******/
+
+.btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: none !important;
+}
+
+.btn:active {
+    outline: none;
+    background-color: #2013DB !important;
+    color: #ffffff !important;   
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn {
+    border-color: #2013DB;
+    color: #2013DB;
+    border-width: 1px;
+}
+
+.btn:hover, .btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active, .show>.btn.dropdown-toggle  {
+    background-color: #2013DB;
+    color: #ffffff;        
+    transition: 0.5s;
+}
+
+/******* BTN Primary *******/
+.btn-primary {
+    background-color: #2013DB;
+    color: #ffffff;  
+}
+
+.btn-primary:hover {
+    background-color: #ffffff;
+    color: #2013DB;  
+    border: 1px solid #2013DB;
+    transition: 0.5s;
+    box-shadow: 0 8px 18px 0px rgba(32,19,219,0.19);
+}

@@ -1,0 +1,15 @@
+.banner-main {
+    margin-top: 120px;
+}
+
+.title-main h1{
+    font-weight: 800;
+    font-size: 57px;
+    letter-spacing: -3px;    
+}
+
+.title-main h1 span{
+    background: -webkit-linear-gradient(#2013DB, #0A00AB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
