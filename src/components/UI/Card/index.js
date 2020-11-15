@@ -59,7 +59,9 @@ function Card(props) {
                 {/* Características da vaga (Ex: MySQL, ORM, Elixir) */}
                 <div className="badger-area" data-badge={props.badgeName}>
                     {props.badgeName.map(value => (
-                        <span className="badge badge-primary">{value.technology}</span>
+                        <span key={value.technology} className="badge badge-primary">
+                            {value.technology}
+                        </span>
                     ))}
                 </div>
             </div>
