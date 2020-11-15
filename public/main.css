@@ -2,7 +2,37 @@ body {
     font-family: 'Epilogue', sans-serif;    
 }
 
+h1 {
+    font-weight: 800;
+}
+
+h2 {
+    font-weight: 800;
+}
+
 p {
     font-weight: 400;
     color: #948E8E;
+}
+
+.background-color {
+    background-color: #2013DB;
+    padding: 50px 0;
+}
+
+.badger-area .badge {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.badge {
+    font-weight: normal;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 15px;    
+}
+
+.badge-primary {
+    background-color: #EFEEFF;
+    color: #2013DB;    
 }

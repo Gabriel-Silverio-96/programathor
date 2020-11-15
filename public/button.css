@@ -45,3 +45,13 @@
     transition: 0.5s;
     box-shadow: 0 8px 18px 0px rgba(32,19,219,0.19);
 }
+
+.btn-secondary {
+    background-color: #ffb700;
+    color: #ffffff;  
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff ;
+    color: #2013DB;  
+}

@@ -9,6 +9,18 @@
     left: 225px;
 }
 
+.icon-third {
+    position: absolute;
+    top: 280px;
+    left: 870px;
+}
+
+.icon-fourth {
+    position: absolute;
+    top: 156px;
+    left: 1040px;
+}
+
 .icon-style {    
     width: 100px;
     height: 100px;

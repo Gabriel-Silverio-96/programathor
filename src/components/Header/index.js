@@ -38,7 +38,8 @@ export default function Headers() {
                             <div className="dropdown dropdown-header">
                                 <button className="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Cadastrar
-                                </button>
+                                </button>                            
+                                
                                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <Link to="/cadastro/candidato" className="dropdown-item">
                                         Cadidato

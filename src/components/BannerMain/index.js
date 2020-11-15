@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-import {DiPhp, DiReact, DiPython, DiNodejs, DiApple} from 'react-icons/di';
+import {DiPhp, DiReact, DiPython, DiNodejsSmall} from 'react-icons/di';
+
+//Components
+import {BtnPrimary} from '../../components/UI/Button';
 
 //Style
-import './style.css'
-import './icon-banner.css'
+import './style.css';
+import './icon-banner.css';
 
-export default function BanneMain() {
-    const [iconState, SetIconState] = useState([
-        DiPython, DiNodejs, DiApple
-    ])      
-   
+export default function BanneMain() { 
     return (           
         <div className="row position-relative">        
             <div className="col-lg-8 m-auto text-center">
@@ -21,8 +20,8 @@ export default function BanneMain() {
                         <h1>programadores <span>Python</span></h1>
                     </div>
                     <p>Tenha acesso a diversas oportunidades <br/> para desenvolvedores</p>
-                    <Link>
-                        <button className="btn btn-primary">Buscar Vagas</button>
+                    <Link to="/vagas">
+                        <BtnPrimary name="Buscar Vagas"/>
                     </Link>
                 </div>
             </div>
@@ -34,7 +33,13 @@ export default function BanneMain() {
                 <DiReact size={75} color="#C6C6D0"/>
             </div>
 
-            
+            <div className="icon-style icon-third">                
+                <DiNodejsSmall size={75} color="#C6C6D0"/>
+            </div>
+
+            <div className="icon-style icon-fourth">                
+                <DiPython size={75} color="#C6C6D0"/>
+            </div>            
         </div>
     )
 }

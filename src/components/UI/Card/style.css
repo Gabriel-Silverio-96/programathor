@@ -1,0 +1,37 @@
+.card {
+    margin-bottom: 25px;  
+    min-height: 450px;  
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03); 
+    transition: 0.3s;    
+    cursor: pointer;
+}
+
+.card img {
+    margin: 25px auto 0;
+}
+
+.card-img-top {
+    width: auto;    
+}
+
+.card-title {
+    font-weight: 800;
+}
+
+.icon-info {
+    align-items: center;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.icon-info svg{
+    margin-right: 7px;
+}
+
+.icon-info span{
+    margin-top: 5px;
+}
