@@ -7,9 +7,10 @@ import BannerMain from '../../components/BannerMain';
 import { BtnSecondary } from '../../components/UI/Button';
 import Cta from '../../components/Cta';
 import ListCompany  from '../../components/ListCompany';
-import { Card } from '../../components/UI/Card/index';
+import { CardPrimary } from '../../components/UI/Card/index';
 import Testimonials from '../../components/Testimonials';
 import CreateAccount from '../../components/CreateAccount';
+import Footer from '../../components/Footer';
 
 //Style
 import './style.css';
@@ -83,9 +84,10 @@ function App() {
                         <h1>Nossas últimas vagas</h1>
                     </div>
                     <div className="row card-jobs">
+                        {/* Listagem de vagas */}
                         {job.map(value => (
                             <div className="col-lg-4" key={value.id}>
-                                <Card
+                                <CardPrimary
                                     job={value.jobName}
                                     companyName={value.companyName}
                                     size={value.size}
@@ -109,15 +111,15 @@ function App() {
                 {/* Call to action */}
                 <Cta />
 
-                <div className="row">
+                <section className="row">
                     <div className="col-lg-7 mx-auto text-center">
                         <h1>Algumas das centenas de empresas que recrutam na <br /> ProgramaThor</h1>
                     </div>
                     <div className="col-lg-12">
                       <ListCompany />
                     </div>
-                </div>
-                <div className="row">
+                </section>
+                <section className="row">
                     <div className="col-lg-12 mx-auto text-center">
                         <h1>Depoimentos dos desenvolvedores</h1>
                     </div>
@@ -159,10 +161,10 @@ function App() {
                             "
                        />
                     </div>
-                </div>
+                </section>
                 <CreateAccount />
-
             </article>
+            <Footer />
         </main >
 
     );

@@ -4,9 +4,9 @@ import { FiBriefcase, FiClipboard, FiBarChart, FiCheckCircle } from 'react-icons
 //Style
 import './style.css';
 
-function Card(props) {
+function CardPrimary(props) {
     return (
-        <div className="card">
+        <div className={props.cardStyle === "horizontal"? "card card-horizontal" : "card" }>
             {/* Logo empresa */}
             <img
                 style=
@@ -57,7 +57,7 @@ function Card(props) {
                     </div>
                 </div>
                 {/* Características da vaga (Ex: MySQL, ORM, Elixir) */}
-                <div className="badger-area" data-badge={props.badgeName}>
+                <div className="badger-area">
                     {props.badgeName.map(value => (
                         <span key={value.technology} className="badge badge-primary">
                             {value.technology}
@@ -69,4 +69,11 @@ function Card(props) {
     )
 }
 
-export { Card }
+
+function CardSecundary(props) {
+    return(
+        <span>Top</span>
+    )
+}
+
+export { CardPrimary, CardSecundary }

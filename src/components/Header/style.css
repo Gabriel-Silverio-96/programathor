@@ -1,9 +1,13 @@
+header {
+    margin-top: 15px;
+}
+
 .nav-item {
     align-items: center;
     display: flex;
 }
 
-.nav-link {
+.header-collapse .navbar-nav .nav-item .nav-link {
     color: #000000 !important;     
 }
 
