@@ -5,8 +5,8 @@ import './style.css';
 
 function Select(props) {
     return (
-        <select class="custom-select">
-            <option selected>Tecnologia</option>   
+        <select className="custom-select">
+            <option defaultValue>Tecnologia</option>   
             {props.option.map(value => (
                 <option key={value.id} value={value.technology}>{value.technology}</option>   
             ))}

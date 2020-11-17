@@ -77,22 +77,24 @@ export default function JobList() {
                         <div className="col-lg-4">
                             <Filter />
                         </div>
-                        <div className="col-lg-8">
-                            <div className="job-list"></div>
+                        <div className="col-lg-8 job-list">
+
 
                             {job.map(value => (
-                                <CardPrimary
-                                    job={value.jobName}
-                                    cardStyle="horizontal"
-                                    companyName={value.companyName}
-                                    size={value.size}
-                                    level={value.level}
-                                    contract={value.contract}
+                                <div key={value.id}>
+                                    <CardPrimary
+                                        job={value.jobName}
+                                        cardStyle="horizontal"
+                                        companyName={value.companyName}
+                                        size={value.size}
+                                        level={value.level}
+                                        contract={value.contract}
 
-                                    image={value.logo}
-                                    alt={value.companyName}
-                                    badgeName={value.topics}
-                                />
+                                        image={value.logo}
+                                        alt={value.companyName}
+                                        badgeName={value.topics}
+                                    />
+                                </div>
                             ))}
                         </div>
                     </div>
