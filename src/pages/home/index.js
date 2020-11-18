@@ -87,17 +87,19 @@ function App() {
                         {/* Listagem de vagas */}
                         {job.map(value => (
                             <div className="col-lg-4" key={value.id}>
-                                <CardPrimary
-                                    job={value.jobName}
-                                    companyName={value.companyName}
-                                    size={value.size}
-                                    level={value.level}
-                                    contract={value.contract}
+                                <Link to={`/detalhe-vaga/${value.id}`} className="link-card">
+                                    <CardPrimary
+                                        job={value.jobName}
+                                        companyName={value.companyName}
+                                        size={value.size}
+                                        level={value.level}
+                                        contract={value.contract}
 
-                                    image={value.logo}
-                                    alt={value.companyName}
-                                    badgeName={value.topics}
-                                />
+                                        image={value.logo}
+                                        alt={value.companyName}
+                                        badgeName={value.topics}
+                                    />
+                                </Link>
                             </div>
                         ))}
                         <Link to="/vagas">

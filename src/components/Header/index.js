@@ -35,7 +35,7 @@ export default function Headers() {
                             </Link>
                         </li>
                         <li className="nav-item ml-0">
-                            <div className="dropdown dropdown-header">
+                            <div className="dropdown dropdown-header pr-0">
                                 <button className="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Cadastrar
                                 </button>                            

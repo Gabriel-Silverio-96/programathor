@@ -7,3 +7,31 @@
 .job-list {
     margin-top: 50px;
 }
+
+.pagination{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.pagination .nav-tabs{
+    border: 0;
+}
+
+.pagination .nav-item .nav-link{
+    border-radius: 50%;
+    border: 0;
+}
+
+.pagination .nav-item {
+    margin-left: 25px;
+}
+
+/*Detalhe vaga*/
+
+.job-detail img{
+   margin-bottom: 15px;
+}
+
+.job-detail {
+    margin-top: 125px;
+}

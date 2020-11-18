@@ -36,3 +36,12 @@ p {
     background-color: #EFEEFF;
     color: #2013DB;    
 }
+
+.link-card {
+    color: inherit;
+    text-decoration: none !important; 
+}
+
+.link-card:hover {
+    color: inherit;
+}
