@@ -29,7 +29,7 @@
 .btn:hover, .btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active, .show>.btn.dropdown-toggle  {
     background-color: #2013DB;
     color: #ffffff;        
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 /******* BTN Primary *******/

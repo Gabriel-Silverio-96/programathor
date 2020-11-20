@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 // import { useParams } from 'react-router-dom';
 
+import { FiBriefcase, FiClipboard, FiBarChart, FiCheckCircle } from 'react-icons/fi';
+
 //Components
 import Header from '../../components/Header';
 import { BtnPrimary } from '../../components/UI/Button';
+import Map from '../../components/Map';
+import CreateAccount from '../../components/CreateAccount';
+import Footer from '../../components/Footer';
 
 //Assets
 import LogoEmpresa1 from '../../assets/image/logo-empresa/1.png';
+
+//Style
+import './style.css';
 
 export default function DetailJob() {
     // const { id } = useParams();
@@ -21,86 +29,131 @@ export default function DetailJob() {
             level: "Pleno",
             contract: "CLT",
             topics: [
-							{id: 1, technology: "Python" },
-							{id: 2, technology: "DevOps" },
-							{id: 3, technology: "PostgreSQL" },
-						],
-						detail:{
-							jobDescription: "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto",
-							activites: "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto",							
-							requirements: [
-								{id: 1, list: "Lorem Ipsum é um texto modelo da indústria tipográfica"},
-								{id: 2, list: "Tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500"},
-								{id: 3, list: "Quando uma misturou os caracteres de um texto"},
-								{id: 4, list: "Lorem Ipsum é um texto modelo da indústria tipográfica"},
-								{id: 5, list: "Tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500"},
-								{id: 6, list: "Quando uma misturou os caracteres de um texto"},
-							]
-						}
-				}					
-    )
+                { id: 1, technology: "Python" },
+                { id: 2, technology: "DevOps" },
+                { id: 3, technology: "PostgreSQL" },
+            ],
+            adress: {
+                position: [-23.6144585, -46.7483466],
+                street: "R. Francisco Marcondes Viêira",
+                number: 3,
+                neigh: "Vila Sonia",
+                city: "São Paulo",
+                state: "SP",
+                zipCode: "05639-090",
+            },
+            detail: {
+                jobDescription: "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto",
+                activites: "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto",
+                requirements: [
+                    { id: 1, list: "Lorem Ipsum é um texto modelo da indústria tipográfica" },
+                    { id: 2, list: "Tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500" },
+                    { id: 3, list: "Quando uma misturou os caracteres de um texto" },
+                    { id: 4, list: "Lorem Ipsum é um texto modelo da indústria tipográfica" },
+                    { id: 5, list: "Tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500" },
+                    { id: 6, list: "Quando uma misturou os caracteres de um texto" },
+                ]
+            }
+        }
+    );
+    const urlGoogleMap = `https://www.google.com/maps/place/ProgramaThor/@${dataJob.position},15z/data=!4m5!3m4!1s0x0:0xa70316251c1919d0!8m2!3d-23.6144585!4d-46.7483466`
+    return (
+        <main>
+            <div className="container">
+                <Header />
 
-return (	
-    <main>
-        <div className="container">
-            <Header />
-
-            <div className="job-detail">
-                <img src={LogoEmpresa1} className="img-fluid" alt="Logo empresa" />
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="badger-area mb-3">
-                            {dataJob.topics.map(value => (
-                                <span key={value.id} className="badge badge-primary">
-                                    {value.technology}
-                                </span>
-                            ))}
+                <div className="job-detail">
+                    <img src={LogoEmpresa1} className="img-fluid" alt="Logo empresa" />
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="badger-area mb-3">
+                                {dataJob.topics.map(value => (
+                                    <span key={value.id} className="badge badge-primary">
+                                        {value.technology}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
                     </div>
+
+                    <div className="row align-items-center">
+                        <div className="col-lg-8">
+                            <div className="title-main">
+                                <h1>{dataJob.jobName}</h1>
+                            </div>
+                        </div>
+                        <div className="col-lg-4">
+                            <BtnPrimary name="Me candidar" />
+                        </div>
+                    </div>
+
+                    <div className="row align-items-center">
+                        <div className="col-lg-8">
+                            <div className="job-description">
+                                <h5>Descrição da vaga</h5>
+
+                                <div className="icon-info icon-detail-job">
+                                    <FiBriefcase size={20} color="#2013DB"></FiBriefcase>
+                                    {/* Nome da empresa */}
+                                    <span>{dataJob.companyName}</span>
+
+                                    <FiClipboard size={20} color="#2013DB"></FiClipboard>
+                                    {/* Tamanho da empresa */}
+                                    <span>{dataJob.size}</span>
+
+                                    <FiBarChart size={20} color="#2013DB"></FiBarChart>
+                                    {/* Nível do cargo (Ex: Júnior, Pleno, Sênior */}
+                                    <span>{dataJob.level}</span>
+
+                                    <FiCheckCircle size={20} color="#2013DB"></FiCheckCircle>
+                                    {/* Tipo de contrato (Ex: PJ, CLT) */}
+                                    <span>{dataJob.contract}</span>
+                                </div>
+
+                                <p>
+                                    {dataJob.detail.jobDescription}
+                                </p>
+                            </div>
+
+                            <div className="job-description">
+                                <h5>Atividades e responsabilidades</h5>
+                                <p>
+                                    {dataJob.detail.activites}
+                                </p>
+                            </div>
+
+                            <div className="job-description">
+                                <h5>Requisitos</h5>
+                                <ul className="requirements position-relative">
+                                    {dataJob.detail.requirements.map(value => (
+                                        <li key={value.id}>{value.list}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-lg-12">
+                            <div className="job-description">
+                                <div className="local">
+                                    <div>
+                                        <h5>Localização</h5>
+                                        <p className="mb-1">{dataJob.adress.street}, {dataJob.adress.number} - {dataJob.adress.neigh}</p>
+                                        <p>{dataJob.adress.zipCode} | {dataJob.adress.city} - {dataJob.adress.state}</p>
+
+                                    </div>
+                                    <a href={urlGoogleMap} target="_blank" rel="noreferrer">
+                                        <BtnPrimary name="Fazer uma rota" />
+                                    </a>
+                                </div>
+                                <div className="map-area">
+                                    <Map position={dataJob.adress.position} companyName={dataJob.companyName} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <CreateAccount />
                 </div>
-
-                <div className="row align-items-center">
-                    <div className="col-lg-8">
-                        <div className="title-main">
-                            <h1>{dataJob.jobName}</h1>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <BtnPrimary name="Me candidar" />
-                    </div>
-                </div>
-                
-                <div className="row align-items-center">
-                    <div className="col-lg-8">
-                        <div className="job-description">
-                            <h5>Descrição da vaga</h5>
-                            <p>
-															{dataJob.detail.jobDescription}
-                            </p>
-                        </div>
-												
-                        <div className="job-description">
-                            <h5>Atividades e responsabilidades</h5>
-                            <p>
-															{dataJob.detail.activites}
-                            </p>
-                        </div>
-												
-                        <div className="job-description">
-                            <h5>Requisitos</h5>
-                            <ul>
-															{dataJob.detail.requirements.map(value => (
-																<li key={value.id}>{value.list}</li>
-															))}
-                            </ul>
-                        </div>
-                    </div>
-                    
-                </div>
-
-
             </div>
-        </div>
-    </main>
-)
+            <Footer />
+        </main >
+    )
 }

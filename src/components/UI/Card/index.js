@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiBriefcase, FiClipboard, FiBarChart, FiCheckCircle } from 'react-icons/fi'
+import { FiBriefcase, FiClipboard, FiBarChart, FiCheckCircle } from 'react-icons/fi';
 
 //Style
 import './style.css';

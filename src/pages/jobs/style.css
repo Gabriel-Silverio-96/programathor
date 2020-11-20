@@ -28,10 +28,58 @@
 
 /*Detalhe vaga*/
 
+.job-description {
+    margin-top: 50px;
+}
+
+.job-description .local{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+    margin-bottom: 25px;
+}
+
+.job-description h5 {
+    font-weight: 800;
+}
+
 .job-detail img{
    margin-bottom: 15px;
 }
 
 .job-detail {
-    margin-top: 125px;
+    margin-top: 100px;
 }
+
+.icon-detail-job {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon-detail-job span{
+    margin-right: 50px;
+}
+
+.requirements {
+    padding-left: 25px;
+    list-style: none;    
+}
+
+.requirements li{
+    color: #948E8E;
+    margin-bottom: 15px;   
+}
+
+.requirements li:before{
+    content: url('../../assets/image/icon/lista-icon.svg');
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    position: absolute;
+    left: -5px;
+}
+
+.requirements li::marker{
+    margin-top: 15px;
+}
+
