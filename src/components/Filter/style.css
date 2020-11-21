@@ -5,30 +5,30 @@
     border-radius: 30px;
 }
 
-.filter-option  {
+.tab-option  {
     margin-bottom: 40px;
 }
 
-.filter-option h6{
+.tab-option h6{
     font-weight: bold;
 }
 
-.filter-option input{
+.tab-option input{
     border-radius: 10px;
     border: 1px solid #ced4da;
     padding: 5px 0 5px 10px;    
 }
 
-.filter-option .nav .nav-item .nav-link {    
+.tab-option .nav .nav-item .nav-link {    
     margin-top: 10px;
     margin-right: 10px;
 }
 
-.filter-option .nav-tabs {
+.tab-option .nav-tabs {
     border: 0;
 }
 
-.filter-option .nav .nav-item .nav-link {    
+.tab-option .nav .nav-item .nav-link {    
     font-weight: normal;
     padding: 10px 25px;    
     font-size: 14px;
@@ -40,7 +40,7 @@
     cursor: pointer;
 }
 
-.filter-option .nav .nav-item .nav-link:hover {    
+.tab-option .nav .nav-item .nav-link:hover {    
     transition: 0.3s;
     background-color: #ffb700;  
     transform: scale(1.08);

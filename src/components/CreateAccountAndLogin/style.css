@@ -1,0 +1,28 @@
+.height-100vh {
+    height: 100vh;
+}
+
+.register-area {
+    padding: 25px;
+    background-color: #ffffff;
+    min-height: 500px;
+    border-radius: 35px;
+}
+
+.form-content {
+    margin-top: 25px;
+}
+
+.form-content h1{
+    letter-spacing: -2px;
+}
+
+.form-content p{
+    color: #2013DB;
+}
+
+@media only screen and (max-width: 991px) {
+    .banner-form {
+        display: none;
+    }
+}

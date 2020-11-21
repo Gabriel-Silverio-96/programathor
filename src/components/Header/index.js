@@ -42,7 +42,7 @@ export default function Headers() {
                                 
                                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <Link to="/cadastro/candidato" className="dropdown-item">
-                                        Cadidato
+                                        Candidato
                                     </Link>
                                     <Link to="/cadastro/empresa" className="dropdown-item">
                                         Empresa

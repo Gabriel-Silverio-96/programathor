@@ -7,13 +7,13 @@ export default function Filter() {
     return (
         <div className="filter">
             {/* Filtro cidade */}
-            <div className="filter-option">
+            <div className="tab-option">
                 <h6>Cidade</h6>
                 <input type="text" />
             </div>
 
             {/* Filtro tipo contrato */}
-            <div className="filter-option">
+            <div className="tab-option">
                 <h6>Contrato</h6>
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item">
@@ -41,7 +41,7 @@ export default function Filter() {
             </div>
 
             {/* Filtro nível de experiência */}
-            <div className="filter-option">
+            <div className="tab-option">
                 <h6>Nível de experiência</h6>
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item">
@@ -69,7 +69,7 @@ export default function Filter() {
             </div>
 
             {/* Filtro tamanho da empresa */}
-            <div className="filter-option">
+            <div className="tab-option">
                 <h6>Tamanho da empresa</h6>
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item">

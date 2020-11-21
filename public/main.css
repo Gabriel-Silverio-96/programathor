@@ -45,3 +45,30 @@ p {
 .link-card:hover {
     color: inherit;
 }
+
+.background-light {
+    background-color: #F8F8FE;
+}
+
+input {
+    padding: 10px 10px !important;    
+    border-radius: 10px; 
+    width: 100%;  
+    border: 1px solid #DED9D9;
+}
+
+input:focus {
+    border-radius: 10px;     
+    border-width: 2px;
+    border-color: #2013DB;
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 13px;
+    color: #cfcece;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}

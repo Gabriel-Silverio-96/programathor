@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 //Components
-import { Select } from '../Inputs';
+import { Select } from '../UI/Inputs';
 
 //Assets
 import BannerJob from '../../assets/image/banner/banner-vaga-lista.png';
