@@ -8,6 +8,7 @@ import DetailJob from './pages/jobs/JobDetail';
 import Candidates from './pages/CreateAccount/candidates';
 import Company from './pages/CreateAccount/company';
 import Login from './pages/Login';
+import Page404 from './pages/404';
 
 export default function Routes() {
     return (
@@ -19,6 +20,8 @@ export default function Routes() {
                 <Route path="/cadastro/candidato" component={Candidates} />
                 <Route path="/cadastro/empresa" component={Company} />
                 <Route path="/login" component={Login} />
+
+                <Route path="*" component={Page404} />
             </Switch>
         </BrowserRouter>
     )

@@ -8,10 +8,13 @@ import Header from '../../components/Header';
 import { BtnPrimary } from '../../components/UI/Button';
 import Map from '../../components/Map';
 import CreateAccount from '../../components/CreateAccount';
+import SocialMediaPost from '../../components/SocialMediaPost';
 import Footer from '../../components/Footer';
 
 //Assets
 import LogoEmpresa1 from '../../assets/image/logo-empresa/1.png';
+import Logo from '../../assets/logo-prograthor.svg';
+import BackgroundPost from '../../assets/image/SocialMediaPost/background-post.png';
 
 //Style
 import './style.css';
@@ -149,6 +152,54 @@ export default function DetailJob() {
                                 </div>
                             </div>
                         </div>
+                        {/* Post area */}
+                        <div className="col-lg-6">
+
+                            <SocialMediaPost
+                                width="1080"
+                                height="1080"
+
+                                backgroundImg={{
+                                    URLImg: BackgroundPost,
+                                    PositionX: 0,
+                                    PositionY: 0,
+                                }}
+
+                                logoPost={{
+                                    URLImg: Logo,
+                                    LogoY: 950,
+                                    width: 215,
+                                    height: 42
+                                }}
+
+                                titleMain={{
+                                    title: dataJob.jobName,
+                                    size: "100px",
+                                    color: "#000000",
+                                    fontFamily: "Epilogue",
+                                    fontWeight: 800,
+                                    titleX: 70,
+                                    titleY: 280,
+                                }}
+
+                                titleSmall={{
+                                    title: "Oportunidade para",
+                                    size: "35px",
+                                    color: "#948E8E",
+                                    titleSmallX: 70,
+                                    titleSmallY: 175,
+                                }}
+
+                                content={{
+                                    text: "Desejável conhecimento em:",
+                                    textX: 70,
+                                    textY: 400,
+                                    color: "#2013DB",
+                                    topics: dataJob.topics
+                                }}
+                            />
+                        </div>
+
                     </div>
                     <CreateAccount />
                 </div>

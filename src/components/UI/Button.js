@@ -2,7 +2,10 @@ import React from 'react';
 
 function BtnPrimary(props) {
     return(
-        <button className="btn btn-primary" type={props.type === undefined ? "button": props.type}>
+        <button className="btn btn-primary" 
+            type={props.type === undefined ? "button": props.type}
+            onClick={props.click}
+        >
             {/* Name button*/}
             {props.name === undefined ? "Button primary" : props.name}
         </button>

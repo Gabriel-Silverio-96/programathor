@@ -6,7 +6,7 @@ import './style.css';
 
 function CardPrimary(props) {
     return (
-        <div className={props.cardStyle === "horizontal"? "card card-horizontal" : "card" }>
+        <div className={props.cardStyle === "horizontal" ? "card card-horizontal" : "card" }>
             {/* Logo empresa */}
             <img
                 style=
