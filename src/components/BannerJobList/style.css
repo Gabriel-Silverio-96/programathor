@@ -7,3 +7,17 @@
     font-size: 47px;
     letter-spacing: -2px;
 }
+
+@media only screen and (max-width: 991px) {
+    .banner-job-list{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .title-job h2{
+        font-weight: 800;
+        font-size: 37px;
+        letter-spacing: -2px;
+    }
+}

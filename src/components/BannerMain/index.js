@@ -9,6 +9,7 @@ import { BtnPrimary } from '../../components/UI/Button';
 //Style
 import './style.css';
 import './icon-banner.css';
+import './responsive.css';
 
 export default function BanneMain() {
     const technology = [".NET", "Python", "React", "Node", "PHP", "Java", "Go"];

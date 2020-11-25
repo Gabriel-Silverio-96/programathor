@@ -48,7 +48,7 @@ export default function BannerJobList() {
                     <Select option={technologyList}/>
                 </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 banner-job-list">
                 <img src={BannerJob} className="img-fluid" alt="Banner vagas"/>
             </div>
         </div>

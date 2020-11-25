@@ -18,3 +18,7 @@ header {
 .dropdown-header .dropdown-toggle::after {
     content: none;
 }
+
+.dropdown-header .dropdown-menu {
+    border-radius: 15px;
+}

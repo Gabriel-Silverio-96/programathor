@@ -1,0 +1,28 @@
+/*Icons*/
+@media only screen and (max-width: 1199px) {
+    .icon-third {
+        left: 700px;
+    }
+
+    .icon-fourth {
+        left: 855px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .icon-style {
+        display: none;
+    }
+}
+
+/*Banner*/
+@media only screen and (max-width: 500px) {
+    h1 {
+        font-size: 37px;
+        letter-spacing: -2px;        
+    }
+    .title-main h1 {
+        font-size: 37px;
+        letter-spacing: -2px;        
+    }
+}

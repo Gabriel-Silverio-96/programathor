@@ -89,7 +89,7 @@ export default function DetailJob() {
                             </div>
                         </div>
                         <div className="col-lg-4">
-                            <BtnSecondary name="Me candidar a vaga" />
+                            <BtnSecondary name="Candidatar à vaga" />
                         </div>
                     </div>
 
