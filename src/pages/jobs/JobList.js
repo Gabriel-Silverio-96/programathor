@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 //Components
 import Header from '../../components/Header';
 import BannerJobList from '../../components/BannerJobList';
@@ -15,9 +16,11 @@ import LogoEmpresa4 from '../../assets/image/logo-empresa/4.png';
 import LogoEmpresa5 from '../../assets/image/logo-empresa/5.png';
 
 //Style
-import './style.css'
+import './style.css';
 
 export default function JobList() {
+
+    //Simulando API
     const [job] = useState([
         {
             id: 1,
@@ -111,6 +114,8 @@ export default function JobList() {
                             <Filter />
                         </div>
                         <div className="col-lg-8 job-list">
+
+                            {/* Lista de card sobre a vaga */}
                             {job.map(value => (
                                 <div key={value.id}>
                                     <Link to={`/detalhe-vaga/${value.id}`} className="link-card">
@@ -167,4 +172,4 @@ export default function JobList() {
         <Footer />
     </main >
     )
-}
+};

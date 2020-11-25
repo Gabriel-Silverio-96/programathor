@@ -29,7 +29,7 @@ export default function Map(props) {
             scrollWheelZoom={true}
         >
             <TileLayer
-                url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2FmcmVpdGFzIiwiYSI6ImNrZzZxbnBreTAxeWozM213dTRycmw0bzAifQ.kwpCuyknim7biPB20owttQ`}
+                url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_TOKEN_MAP}`}
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             //    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />

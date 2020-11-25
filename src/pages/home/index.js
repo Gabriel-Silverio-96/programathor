@@ -25,6 +25,7 @@ import ImgUser2 from '../../assets/image/user-face/2.png';
 import ImgUser3 from '../../assets/image/user-face/3.png';
 
 function App() {
+    //Simulando API
     const [job] = useState([
         {
             id: 1,
@@ -118,6 +119,7 @@ function App() {
                         <h1>Algumas das centenas de empresas que recrutam na <br /> ProgramaThor</h1>
                     </div>
                     <div className="col-lg-12">
+                      {/* Logos empresa */}
                       <ListCompany />
                     </div>
                 </section>
@@ -126,6 +128,7 @@ function App() {
                         <h1>Depoimentos dos desenvolvedores</h1>
                     </div>
                     <div className="col-lg-4">
+                        {/* Depoimentos */}
                        <Testimonials 
                             imgUser={ImgUser1}
                             dev="Júlia Guimaraes"
@@ -168,8 +171,7 @@ function App() {
             </article>
             <Footer />
         </main >
-
-    );
-}
+    )
+};
 
 export default App;

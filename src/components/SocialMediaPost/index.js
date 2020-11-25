@@ -12,6 +12,11 @@ import './style.css';
 export default function SocialMediaPost(props) {
     const titleFile = props.titleMain.title;
 
+    /*
+        Construção do post para rede sociais com canvas
+        Utilizado o Hook useEffect para solucionar o problema
+        de getContext null do canvas    
+    */
     useEffect(() => {
         const post = document.getElementById('post');
         const ctx = post.getContext('2d');
@@ -82,14 +87,19 @@ export default function SocialMediaPost(props) {
 
     }, [props]);
 
+    //Função para download do post
     function BtnDownloadPost() {
         const post = document.getElementById('post');
         let href = document.createElement('a');
-        href.download = `Programathor vaga - ${titleFile}.png`;
+        href.download = `Programathor vaga - ${titleFile}.jpg`;
         href.href = post.toDataURL();
         return href.click();
     }
 
+    /*
+        Variável de url, para quando a aplicação estiver em produção
+        ser possível realizar o compartilhamento dos posts das redes sociais
+    */
     const urlApp = window.location.origin;
 
     return (

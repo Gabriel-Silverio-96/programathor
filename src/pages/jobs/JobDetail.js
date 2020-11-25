@@ -22,6 +22,7 @@ import './style.css';
 export default function DetailJob() {
     // const { id } = useParams();
 
+    //Simulando API
     const [dataJob] = useState(
         {
             id: 1,
@@ -59,6 +60,8 @@ export default function DetailJob() {
             }
         }
     );
+
+    //Url Google maps fazer rota
     const urlGoogleMap = `https://www.google.com/maps/place/ProgramaThor/@${dataJob.position},15z/data=!4m5!3m4!1s0x0:0xa70316251c1919d0!8m2!3d-23.6144585!4d-46.7483466`
     return (
         <main>
@@ -152,6 +155,7 @@ export default function DetailJob() {
                                 </div>
                             </div>
                         </div>
+
                         {/* Post area */}
 
                         <div className="col-lg-8 m-auto">
@@ -203,8 +207,6 @@ export default function DetailJob() {
                                 topics: dataJob.topics
                             }}
                         />
-
-
                     </div>
                     <CreateAccount />
                 </div>

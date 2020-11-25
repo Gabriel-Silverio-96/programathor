@@ -40,17 +40,26 @@ export default function Company() {
                             <input type="email"
                                 name="email"
                                 onChange={handleChange}
-                                placeholder="Ex: seuemail@email.com.br" />
+                                placeholder="Ex: seuemail@email.com.br" 
+                            />
                         </div>
                         <div className="input-group">
                             {/* Campo de senha */}
-                            <label>Senha</label>
-                            <input type="password" name="password" onChange={handleChange} placeholder="********" />
+                            <label>Senha</label>                            
+                            <input type="password"
+                                name="password" 
+                                onChange={handleChange} 
+                                placeholder="********" 
+                            />
                         </div>
                         <div className="input-group">
                             {/* Campo de confirmação de senha */}
                             <label>Confirmar senha</label>
-                            <input type="password" name="confirmedPassword" onChange={handleChange} placeholder="********" />
+                            <input type="password"
+                                name="confirmedPassword"
+                                onChange={handleChange} 
+                                placeholder="********" 
+                            />
                         </div>
 
                         <div className="text-right">
