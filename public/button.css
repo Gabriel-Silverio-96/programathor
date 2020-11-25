@@ -49,13 +49,22 @@
 .btn-secondary {
     background-color: #ffb700;
     color: #ffffff;  
+    border: 0;
 }
 
 .btn-secondary:hover {
-    background-color: #ffffff ;
+    background-color: #EFEEFF ;
     color: #2013DB;  
 }
 
 .btn-align {
     text-align: right;
+}
+
+.btn-icon {    
+    display: flex;
+}
+
+.btn-icon svg{    
+    margin-right: 5px;
 }

@@ -1,10 +1,17 @@
 import React, { useEffect } from 'react';
 
 //Components
-import { BtnPrimary } from '../UI/Button';
+import { BtnPrimary, BtnOutlinePrimary } from '../UI/Button';
+
+//Icons
+import { FaFacebook, FaLinkedin } from 'react-icons/fa';
+
+//Style
+import './style.css';
 
 export default function SocialMediaPost(props) {
-    const titleFile = props.titleMain.title
+    const titleFile = props.titleMain.title;
+
     useEffect(() => {
         const post = document.getElementById('post');
         const ctx = post.getContext('2d');
@@ -83,19 +90,37 @@ export default function SocialMediaPost(props) {
         return href.click();
     }
 
+    const urlApp = window.location.origin;
 
     return (
-        <>
-            <img src={props.backgroundImg.URLImg} id="backgroundImg" style={{ display: "none" }} alt="Background post" />
-            <img src={props.logoPost.URLImg} id="logoPost" style={{ display: "none" }} alt="Logo post" />
-            <canvas className="img-fluid"
-                id="post"
-                width={Number(props.width) - 2}
-                height={Number(props.height) - 2}
-                style={{ border: "2px solid #2013DB", borderRadius: "25px" }}>
-            </canvas>
+        <div className="row align-items-center">
+            <div className="col-lg-6 m-auto">
+                <img src={props.backgroundImg.URLImg} id="backgroundImg" style={{ display: "none" }} alt="Background post" />
+                <img src={props.logoPost.URLImg} id="logoPost" style={{ display: "none" }} alt="Logo post" />
+                <canvas className="img-fluid"
+                    id="post"
+                    width={Number(props.width) - 2}
+                    height={Number(props.height) - 2}
+                    style={{ border: "2px solid #2013DB", borderRadius: "25px" }}>
+                </canvas>
+            </div>
+            <div className="col-lg-12 btn-post-share">
+                <BtnPrimary name="Download post" click={BtnDownloadPost} />
+               
+                <a target="_blank" rel="noreferrer"
+                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${urlApp}${props.backgroundImg.URLImg}&title=&summary=&source=`}>
+                    <BtnOutlinePrimary name={<FaLinkedin size={20} color="#cdcdcd" btnicon="true" />}> 
+                        <span>Linkedin</span>     
+                    </BtnOutlinePrimary>
+                </a>
 
-            <BtnPrimary name="Download" click={BtnDownloadPost} />
-        </>
+                <a target="_blank" rel="noreferrer"
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${urlApp}${props.backgroundImg.URLImg}`}>
+                    <BtnOutlinePrimary name={<FaFacebook size={20} color="#cdcdcd" btnicon="true" />}> 
+                        <span>Facebook</span>     
+                    </BtnOutlinePrimary>
+                </a>
+            </div>
+        </div>
     )
 }

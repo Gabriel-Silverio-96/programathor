@@ -1,24 +1,38 @@
+@import 'animation.css';
+
 .icon-primary {
     position: absolute;
     top: 120px;
+    animation: floatPrimary 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
 }
 
 .icon-secondary {
     position: absolute;
     top: 350px;
     left: 225px;
+    animation: floatSecondary 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
 }
 
 .icon-third {
     position: absolute;
     top: 280px;
     left: 870px;
+    animation: floatThird 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
 }
 
 .icon-fourth {
     position: absolute;
     top: 156px;
     left: 1040px;
+    animation: floatFourth 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
 }
 
 .icon-style {    
@@ -31,5 +45,5 @@
     margin: auto;
     align-items: center;
     box-shadow: 0px 12px 14px 2px rgba(0,0,0,0.03);
-    z-index: -1;
+    z-index: -1;    
 }

@@ -1,12 +1,13 @@
 import React from 'react';
 import { FiBriefcase, FiClipboard, FiBarChart, FiCheckCircle } from 'react-icons/fi';
+import { ScrollTop } from '../../Util';
 
 //Style
 import './style.css';
 
-function CardPrimary(props) {
+function CardPrimary(props) {   
     return (
-        <div className={props.cardStyle === "horizontal" ? "card card-horizontal" : "card" }>
+        <div className={props.cardStyle === "horizontal" ? "card card-horizontal" : "card" } onClick={ScrollTop}>
             {/* Logo empresa */}
             <img
                 style=

@@ -1,0 +1,20 @@
+.btn-post-share {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-post-share a, button{
+    margin-top: 5px;    
+}
+
+.btn-post-share .btn-primary{
+    margin-top: 10px;
+}
+
+.btn-post-share a:nth-child(2){
+    margin-right: 15px;
+    margin-left: 15px;
+}
