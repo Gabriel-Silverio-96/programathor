@@ -1,0 +1,14 @@
+.center-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.title-large h1{
+    font-size: 150px;
+    color: #2013DB;
+}
+
+.title-large p{
+    margin-top: -25px;
+}
