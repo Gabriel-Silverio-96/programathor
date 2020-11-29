@@ -25,6 +25,24 @@ Caso não conheça o Programathor, essa é uma plataforma que oferece milhares d
 * [React Icons](https://react-icons.github.io/react-icons/)
 * [MapBox](https://www.mapbox.com/)
 
+## 🗺️ Mapa
+
+Nesta aplicação, foi utilizado a solução do React Leaflet. Porém foram alteradas as imagens do mapa, com a solução do Mapbox.
+
+* Para poder utilizar as imagens do Mapbox, **crie uma conta** <br> 🌐 https://account.mapbox.com/auth/signup/
+
+* Após logado, clique no astronauta(canto superior direito)e acesse a opção **account**(conta) <br> 🌐 https://account.mapbox.com/
+
+* Clique no botão **Create a token**
+
+* Com o projeto clonado, acesse a pasta raiz e crie um arquivo chamado **.env**, e cole o código abaixo, junto com o seu token criado
+
+```
+REACT_APP_TOKEN_MAP= Cole seu token aqui, sem aspas somente o token =)
+```
+
+📍 Para mais detalhes, acesse o link deste post aqui >> https://www.freecodecamp.org/news/how-to-set-up-a-custom-mapbox-basemap-with-gatsby-and-react-leaflet/
+
 ## 📁 Clona aí
 
 Com o projeto clonado, acesse a pasta dos arquivos
