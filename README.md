@@ -12,6 +12,8 @@
 
 ## 📝 Sobre 
 
+🌐 acesse: https://gabriel-silverio-96.github.io/programathor/
+
 Projeto destinado a trazer uma nova interface para o Programathor.
 
 Caso não conheça o Programathor, essa é uma plataforma que oferece milhares de oportunidades para devs.
@@ -29,9 +31,9 @@ Caso não conheça o Programathor, essa é uma plataforma que oferece milhares d
 
 Nesta aplicação, foi utilizado a solução do React Leaflet. Porém foram alteradas as imagens do mapa, com a solução do Mapbox.
 
-* Para poder utilizar as imagens do Mapbox, **crie uma conta** <br> 🌐 https://account.mapbox.com/auth/signup/
+* Para poder utilizar as imagens do Mapbox, **crie uma conta** <br> https://account.mapbox.com/auth/signup/
 
-* Após logado, clique no astronauta(canto superior direito)e acesse a opção **account**(conta) <br> 🌐 https://account.mapbox.com/
+* Após logado, clique no astronauta(canto superior direito)e acesse a opção **account**(conta) <br> https://account.mapbox.com/
 
 * Clique no botão **Create a token**
 
