@@ -15,6 +15,7 @@ export default function Routes() {
         <BrowserRouter>
             <Switch>
                 <Route exact path="/" component={index} />
+                <Route path="/programathor" component={index} />
                 <Route path="/vagas" component={JobList} />
                 <Route path="/detalhe-vaga/:id" component={DetailJob} />
                 <Route path="/cadastro/candidato" component={Candidates} />
