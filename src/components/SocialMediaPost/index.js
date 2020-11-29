@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 //Components
 import { BtnPrimary, BtnOutlinePrimary } from '../UI/Button';
@@ -9,9 +9,7 @@ import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 //Style
 import './style.css';
 
-export default function SocialMediaPost(props) {
-    const [URLCanvas, setURLCanvas] = useState("");
-
+export default function SocialMediaPost(props) {   
     const titleFile = props.titleMain.title;
 
     /*
@@ -83,13 +81,7 @@ export default function SocialMediaPost(props) {
             const topicsColor = props.content.color;
             ctx.fillStyle = topicsColor;
             return ctx.fillText(value.technology, contentTextX, listTechnologyEixoYSum += 60);
-        })
-
-        //Construção de url para o canvas        
-        post.toBlob(function (blob) {
-            const urlCanvas = URL.createObjectURL(blob)
-            setURLCanvas(urlCanvas);
-        });
+        })   
        
     }, [props]);
 
@@ -101,6 +93,9 @@ export default function SocialMediaPost(props) {
         href.href = post.toDataURL();
         return href.click();
     }
+
+    //Link da vaga
+    const shareJobURL = window.location.href;
 
     return (
         <div className="row align-items-center">
@@ -117,14 +112,14 @@ export default function SocialMediaPost(props) {
                 <BtnPrimary name="Download post" click={BtnDownloadPost} />
 
                 <a target="_blank" rel="noreferrer"
-                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${URLCanvas}&title=&summary=&source=`}>
+                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${shareJobURL}&title=&summary=&source=`}>
                     <BtnOutlinePrimary name={<FaLinkedin size={20} color="#cdcdcd" btnicon="true" />}>
                         <span>Linkedin</span>
                     </BtnOutlinePrimary>
                 </a>
 
                 <a target="_blank" rel="noreferrer"
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${URLCanvas}`}>
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${shareJobURL}`}>
                     <BtnOutlinePrimary name={<FaFacebook size={20} color="#cdcdcd" btnicon="true" />}>
                         <span>Facebook</span>
                     </BtnOutlinePrimary>
