@@ -16,7 +16,14 @@ Projeto destinado a trazer uma nova interface para o Programathor.
 
 Caso não conheça o Programathor, essa é uma plataforma que oferece milhares de oportunidades para devs.
 
-Para construção das telas, foi utilizado ReactJS, e na parte do CSS, a fim de agilizar o processo de desenvolvimento, ficou a cargo o bootstrap.
+## 💻 Tecnologias
+
+* [ReactJS](https://pt-br.reactjs.org/)
+* [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+* [Leaflet](https://leafletjs.com/)
+* [React Leaflet](https://react-leaflet.js.org/)
+* [React Icons](https://react-icons.github.io/react-icons/)
+* [MapBox](https://www.mapbox.com/)
 
 ## 📁 Clona aí
 
