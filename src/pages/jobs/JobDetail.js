@@ -14,7 +14,6 @@ import Footer from '../../components/Footer';
 //Assets
 import LogoEmpresa1 from '../../assets/image/logo-empresa/1.png';
 import Logo from '../../assets/logo-prograthor.svg';
-import BackgroundPost from '../../assets/image/SocialMediaPost/background-post.png';
 
 //Style
 import './style.css';
@@ -168,10 +167,10 @@ export default function DetailJob() {
                             width="1080"
                             height="1080"
 
-                            backgroundImg={{
-                                URLImg: BackgroundPost,
-                                PositionX: 0,
-                                PositionY: 0,
+                            backgroundColor={{
+                                color: "#ffffff",
+                                PositionColorX: 0,
+                                PositionColorY: 0,
                             }}
 
                             logoPost={{

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 //Components
 import { BtnPrimary, BtnOutlinePrimary } from '../UI/Button';
@@ -10,6 +10,8 @@ import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 import './style.css';
 
 export default function SocialMediaPost(props) {
+    const [URLCanvas, setURLCanvas] = useState("");
+
     const titleFile = props.titleMain.title;
 
     /*
@@ -21,12 +23,10 @@ export default function SocialMediaPost(props) {
         const post = document.getElementById('post');
         const ctx = post.getContext('2d');
 
-        //Main Background image 
-        const backgroundImg = document.getElementById('backgroundImg');
-
-        const PositionX = props.backgroundImg.PositionX;
-        const PositionY = props.backgroundImg.PositionY;
-        ctx.drawImage(backgroundImg, PositionX, PositionY);
+        //Main background color
+        ctx.rect(0, 0, props.width, props.height);
+        ctx.fillStyle = props.backgroundColor.color;
+        ctx.fill();
 
         //Logo
         const logoPost = document.getElementById('logoPost');
@@ -85,6 +85,12 @@ export default function SocialMediaPost(props) {
             return ctx.fillText(value.technology, contentTextX, listTechnologyEixoYSum += 60);
         })
 
+        //Construção de url para o canvas        
+        post.toBlob(function (blob) {
+            const urlCanvas = URL.createObjectURL(blob)
+            setURLCanvas(urlCanvas);
+        });
+       
     }, [props]);
 
     //Função para download do post
@@ -96,16 +102,9 @@ export default function SocialMediaPost(props) {
         return href.click();
     }
 
-    /*
-        Variável de url, para quando a aplicação estiver em produção
-        ser possível realizar o compartilhamento dos posts das redes sociais
-    */
-    const urlApp = window.location.origin;
-
     return (
         <div className="row align-items-center">
-            <div className="col-lg-6 m-auto">
-                <img src={props.backgroundImg.URLImg} id="backgroundImg" style={{ display: "none" }} alt="Background post" />
+            <div className="col-lg-6 m-auto">              
                 <img src={props.logoPost.URLImg} id="logoPost" style={{ display: "none" }} alt="Logo post" />
                 <canvas className="img-fluid"
                     id="post"
@@ -116,18 +115,18 @@ export default function SocialMediaPost(props) {
             </div>
             <div className="col-lg-12 btn-post-share">
                 <BtnPrimary name="Download post" click={BtnDownloadPost} />
-               
+
                 <a target="_blank" rel="noreferrer"
-                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${urlApp}${props.backgroundImg.URLImg}&title=&summary=&source=`}>
-                    <BtnOutlinePrimary name={<FaLinkedin size={20} color="#cdcdcd" btnicon="true" />}> 
-                        <span>Linkedin</span>     
+                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${URLCanvas}&title=&summary=&source=`}>
+                    <BtnOutlinePrimary name={<FaLinkedin size={20} color="#cdcdcd" btnicon="true" />}>
+                        <span>Linkedin</span>
                     </BtnOutlinePrimary>
                 </a>
 
                 <a target="_blank" rel="noreferrer"
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${urlApp}${props.backgroundImg.URLImg}`}>
-                    <BtnOutlinePrimary name={<FaFacebook size={20} color="#cdcdcd" btnicon="true" />}> 
-                        <span>Facebook</span>     
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${URLCanvas}`}>
+                    <BtnOutlinePrimary name={<FaFacebook size={20} color="#cdcdcd" btnicon="true" />}>
+                        <span>Facebook</span>
                     </BtnOutlinePrimary>
                 </a>
             </div>
