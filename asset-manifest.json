@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/programathor/static/css/main.39313891.chunk.css",
+    "main.js": "/programathor/static/js/main.a43ca830.chunk.js",
+    "main.js.map": "/programathor/static/js/main.a43ca830.chunk.js.map",
+    "runtime-main.js": "/programathor/static/js/runtime-main.068cd336.js",
+    "runtime-main.js.map": "/programathor/static/js/runtime-main.068cd336.js.map",
+    "static/css/2.b4ebbe46.chunk.css": "/programathor/static/css/2.b4ebbe46.chunk.css",
+    "static/js/2.1eb0ce07.chunk.js": "/programathor/static/js/2.1eb0ce07.chunk.js",
+    "static/js/2.1eb0ce07.chunk.js.map": "/programathor/static/js/2.1eb0ce07.chunk.js.map",
+    "index.html": "/programathor/index.html",
+    "static/css/2.b4ebbe46.chunk.css.map": "/programathor/static/css/2.b4ebbe46.chunk.css.map",
+    "static/css/main.39313891.chunk.css.map": "/programathor/static/css/main.39313891.chunk.css.map",
+    "static/js/2.1eb0ce07.chunk.js.LICENSE.txt": "/programathor/static/js/2.1eb0ce07.chunk.js.LICENSE.txt",
+    "static/media/4.0ff8407b.png": "/programathor/static/media/4.0ff8407b.png",
+    "static/media/banner-alerta.deda5151.png": "/programathor/static/media/banner-alerta.deda5151.png",
+    "static/media/banner-criar-conta-candidato.652a714d.png": "/programathor/static/media/banner-criar-conta-candidato.652a714d.png",
+    "static/media/banner-criar-conta-empresa.942bc621.png": "/programathor/static/media/banner-criar-conta-empresa.942bc621.png",
+    "static/media/banner-gratuito.89cab8e0.png": "/programathor/static/media/banner-gratuito.89cab8e0.png",
+    "static/media/banner-login.d730c3cc.png": "/programathor/static/media/banner-login.d730c3cc.png",
+    "static/media/banner-soprogrmadores.3246225a.png": "/programathor/static/media/banner-soprogrmadores.3246225a.png",
+    "static/media/banner-vaga-lista.2d00569d.png": "/programathor/static/media/banner-vaga-lista.2d00569d.png",
+    "static/media/style.css": "/programathor/static/media/lista-icon.c2cbf96b.svg",
+    "static/media/logo-prograthor.d64bb5b8.svg": "/programathor/static/media/logo-prograthor.d64bb5b8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.068cd336.js",
+    "static/css/2.b4ebbe46.chunk.css",
+    "static/js/2.1eb0ce07.chunk.js",
+    "static/css/main.39313891.chunk.css",
+    "static/js/main.a43ca830.chunk.js"
+  ]
+}

@@ -1,0 +1,74 @@
+body {
+    font-family: 'Epilogue', sans-serif;    
+}
+
+h1 {
+    font-weight: 800;
+}
+
+h2 {
+    font-weight: 800;
+}
+
+p {
+    font-weight: 400;
+    color: #948E8E;
+}
+
+.background-color {
+    background-color: #2013DB;
+    padding: 50px 0;
+}
+
+.badger-area .badge {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.badge {
+    font-weight: normal;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 15px;    
+}
+
+.badge-primary {
+    background-color: #EFEEFF;
+    color: #2013DB;    
+}
+
+.link-card {
+    color: inherit;
+    text-decoration: none !important; 
+}
+
+.link-card:hover {
+    color: inherit;
+}
+
+.background-light {
+    background-color: #F8F8FE;
+}
+
+input {
+    padding: 10px 10px !important;    
+    border-radius: 10px; 
+    width: 100%;  
+    border: 1px solid #DED9D9;
+}
+
+input:focus {
+    border-radius: 10px;     
+    border-width: 2px;
+    border-color: #2013DB;
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 13px;
+    color: #cfcece;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
